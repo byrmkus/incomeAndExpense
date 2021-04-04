@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+   		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/INCOMEANDEXPENSE</property> <!-- BD Mane -->
+   		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+   		<property name="hibernate.connection.username">postgres</property> <!-- DB User -->
+   		<property name="hibernate.connection.password">root</property> <!-- DB Password -->
+   		<property name="connection.pool_size">100</property>
+   		
+   		<property name="hibernate.hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+		<property name="hibernate.show_sql">true</property> <!-- Show SQL in console -->
+	<!--  <property name="hibernate.format_sql">true</property>  -->	
+		<mapping class="com.baykus.butget.models.income"/>
+		<mapping class="com.baykus.butget.models.Users"/>
+		<mapping class="com.baykus.butget.models.expense"/>
+		
+	</session-factory>
+</hibernate-configuration>
